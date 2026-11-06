@@ -1,0 +1,41 @@
+/* Кнопки */
+.button{
+    padding: var(--space-8) var(--space-16);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-8);
+    
+}
+.button--theme_light{
+    background-color: var(--color-btn);
+    color: var(--color-text-light);
+}
+.button--theme_dark,
+.button--with_arrow{
+    background-color: var(--color-btn-secondary);
+    color: var(--color-text-light);
+}
+.button--theme_light,
+.button--theme_dark,
+.button--with_arrow{
+    transition: var(--transition-2s);
+}
+.button--theme_light:hover,
+.button--theme_dark:hover,
+.button--with_arrow:hover{
+    background-color: var(--color-btn-hover);
+}
+.button--with_arrow:hover{
+    gap: var(--space-16);
+}
+
+/* Инпут поле */
+.input-form {
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid var(--color-text);
+    padding: var(--space-8) var(--space-16);
+    outline-color: var(--color-accent-secondary);
+}

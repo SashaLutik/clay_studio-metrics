@@ -1,0 +1,206 @@
+.categories,
+.FAQ,
+.popular-products {
+  text-align: center;
+}
+/* Hero */
+/* .home-hero {
+  background: url(/assets/images/bg/hero_home_bg.webp) 0 0 / cover no-repeat;
+} */
+.home-hero h1 {
+  max-width: 565px;
+}
+.home-hero .hero__inner {
+  max-width: 350px;
+}
+.hero__desc {
+  padding-top: var(--space-8);
+  margin-bottom: var(--space-24);
+  border-top: 1px solid #39352d66;
+}
+/* About */
+.about__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-24);
+}
+.about__list {
+  max-width: 588px;
+}
+.about__item:not(.about__item:last-child) {
+  margin-bottom: var(--space-16);
+}
+.about__item .title-h4 {
+  margin-bottom: var(--space-8);
+}
+.about__inner img {
+  border-radius: 8px;
+}
+
+/* Categories */
+.categories__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-24);
+}
+.categories__link {
+  border-radius: 13px;
+  padding: var(--space-16);
+}
+.categories__link,
+.categories__link img {
+  transition: var(--transition-3s);
+}
+.categories__link:hover {
+  box-shadow: 0 0 8px #39352d33;
+}
+.categories__link:hover img {
+  transform: scale(110%);
+}
+.categories-container__img {
+  background-color: var(--color-bg-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.categories-container__img img {
+  width: 100%;
+  object-fit: cover;
+}
+.categories__link .title-h4 {
+  text-align: center;
+  margin-top: var(--space-16);
+}
+
+/* Popular products */
+.popular-products__list {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-24);
+}
+/* FAQ */
+.FAQ__detail {
+  max-width: 49.5rem;
+  margin: 0 auto;
+  margin-bottom: var(--space-16);
+  padding: var(--space-16) var(--space-32) 0;
+  border-radius: 8px;
+}
+.FAQ__detail:last-child {
+  margin-bottom: 0;
+}
+.FAQ__detail[open] {
+  background: var(--color-bg-secondary);
+}
+.FAQ__summary {
+  border-bottom: 1px solid #39352d66;
+  padding-bottom: var(--space-16);
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.FAQ__summary::after {
+  content: "";
+  background-image: url(../assets/images/icons/chevron-icon.svg);
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: var(--space-8);
+  flex-shrink: 0;
+}
+.FAQ__detail,
+.FAQ__summary,
+.FAQ__summary::after {
+  transition: var(--transition-3s);
+}
+
+.FAQ__detail[open] .FAQ__summary::after {
+  transform: rotate(-180deg);
+}
+
+.FAQ__answer {
+  padding: var(--space-16) 0;
+  text-align: left;
+}
+
+/* CTA */
+.home-CTA {
+  background: url(/assets/images/bg/CTA_home_bg.webp) 0 0 / cover no-repeat;
+}
+.CTA h2 {
+  margin-bottom: var(--space-16);
+}
+.CTA {
+  padding-bottom: 5rem;
+}
+.CTA__inner {
+  max-width: 550px;
+}
+.CTA .button {
+  max-width: 350px;
+  margin-top: var(--space-24);
+}
+@media (max-width: 960px) {
+  .about__inner img {
+    display: none;
+  }
+  .categories__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(450px, 100%), 1fr));
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .categories-container__img {
+    width: 100%;
+  }
+  .popular-products__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(284px, 100%), 1fr));
+  }
+}
+@media (max-width: 860px) {
+  .home-hero .container {
+    text-align: center;
+  }
+  .home-hero h1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home-hero .hero__inner {
+    margin: 0 auto;
+  }
+  .about {
+    text-align: center;
+  }
+  .about__inner {
+    justify-content: center;
+  }
+}
+@media (max-width: 710px) {
+  .FAQ__detail {
+    padding: var(--space-16) var(--space-16) 0;
+  }
+  .FAQ__summary {
+    font-size: 16px;
+  }
+}
+@media (max-width: 475px) {
+  .home-CTA {
+    text-align: center;
+  }
+  .CTA .button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 400px) {
+  .categories-container__img {
+    max-height: 300px;
+  }
+}

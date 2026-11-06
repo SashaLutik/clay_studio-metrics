@@ -1,0 +1,106 @@
+.main-content {
+  padding: var(--space-64) 0;
+}
+.characteristics,
+.care {
+  padding: var(--space-32) 0;
+}
+.important {
+  padding: var(--space-32) 0 var(--space-64);
+}
+.characteristics h3,
+.care h3,
+.important h3 {
+  margin-bottom: var(--space-16);
+}
+.main-content-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-64);
+}
+.main-content__image-container {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.main-content__inner {
+  max-width: 450px;
+}
+.main-content__inner h2 {
+  margin-bottom: var(--space-16);
+}
+.main-content__inner p:first-of-type {
+  margin-bottom: var(--space-8);
+}
+.main-content__inner .title-h4 {
+  margin: var(--space-16) 0 var(--space-8);
+}
+.main-content__inner .button--theme_light {
+  margin: var(--space-16) 0;
+}
+
+.characteristics-list__item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-8);
+}
+.characteristics-list__item:not(.characteristics-list__item:last-child),
+.care-list__item:not(care-list__item:last-child) {
+  margin-bottom: var(--space-16);
+}
+.care-list__item h4 {
+  margin-bottom: var(--space-4);
+}
+
+@media (max-width: 990px) {
+  .main-content__image-container {
+    max-width: 400px;
+  }
+  .main-content__image-container img {
+    object-fit: cover;
+  }
+  .main-content__inner {
+    max-width: 350px;
+  }
+}
+@media (max-width: 780px) {
+  .main-content-container {
+    flex-direction: column;
+  }
+  .characteristics,
+  .care,
+  .important {
+    text-align: center;
+  }
+  .characteristics-list__item {
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .main-content-container {
+    gap: var(--space-32);
+  }
+}
+@media (max-width: 440px) {
+  .characteristics,
+  .care,
+  .important {
+    text-align: left;
+  }
+  .characteristics-list__item {
+    justify-content: left;
+  }
+  .main-content {
+    padding: var(--space-32) 0;
+  }
+  .characteristics-list__item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .characteristics,
+  .care {
+    padding: var(--space-24) 0;
+  }
+  .important {
+    padding: var(--space-24) 0 var(--space-32);
+  }
+}
